@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Para ejecutar el proyecto
 
-Ejecutar `npm i`
-Ejecutar `ng serve`
-Si presenta un error al ejecutar el comando anterior ejecutar `npm install -g @angular/cli`
+Ejecutar `npm i`.
+Ejecutar `ng serve` y navegar en  `http://localhost:4200/`.
+Si presenta un error al ejecutar el comando anterior ejecutar `npm install -g @angular/cli`.
 
 ## Code scaffolding
 
