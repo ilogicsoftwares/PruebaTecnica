@@ -1,0 +1,16 @@
+<div style="text-align:center">
+
+
+  <h2>Se listan los siguientes POST: </h2>
+  
+  
+</div>
+<ol class="list-group">
+  <li class="list-group-item" *ngFor="let item of posts">
+    <a [routerLink]="['/comments/',item.id]"><strong>id:</strong>{{item.id}}</a>
+    <p><strong>userid:</strong>{{item.userId}}</p>
+    <p><strong>title:</strong>{{item.title}}</p>
+    <p><strong>body:</strong>{{item.body}}</p>
+  </li>
+  
+</ol>

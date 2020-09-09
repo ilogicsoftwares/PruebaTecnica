@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import Post from "../app/models/post"
-import { RequestsService } from './services/requests.service';
+import Post from "../../../app/models/post"
+import { RequestsService } from '../../services/requests.service';
 import { takeWhile } from 'rxjs/operators';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-item-list',
+  templateUrl: './item-list.component.html',
+  styleUrls: ['./item-list.component.css']
 })
-export class AppComponent implements OnInit {
+export class ItemListComponent implements OnInit {
+
   title = 'PruebaTecnica';
-  posts:Post;
+  posts:Post[];
   alive=true;
   constructor(private req:RequestsService){
    
@@ -20,7 +22,7 @@ export class AppComponent implements OnInit {
     this.alive=false;
   }
   ngOnInit(): void {
-   this.req.post().pipe(takeWhile(()=>this.alive)).subscribe((data:Post)=>{
+   this.req.post().pipe(takeWhile(()=>this.alive)).subscribe((data:Post[])=>{
      this.posts=data;
    })
     
